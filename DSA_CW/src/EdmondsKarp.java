@@ -75,4 +75,17 @@ class EdmondsKarp {
 
         return maxFlow;
     }
+
+    public String getDetailedSteps() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Edmonds-Karp Algorithm Steps:\n");
+
+        for (int i = 0; i < augmentingPaths.size(); i++) {
+            sb.append("Step ").append(i+1).append(":\n");
+            sb.append("  Path: ").append(augmentingPaths.get(i)).append("\n");
+            sb.append("  Flow: ").append(pathFlows.get(i)).append("\n");
+        }
+
+        return sb.toString();
+    }
 }
