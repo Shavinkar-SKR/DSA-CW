@@ -1,14 +1,17 @@
+//Student ID: 20233155
+//Student Name: Shavinkar Ravichandran
+
 import java.util.*;
 
 class FlowNetwork {
-    private final int numNodes;
+    private final int numOfNodes;
     private List<List<Edge>> adjacencyList;
 
-    public FlowNetwork(int numNodes) {
-        this.numNodes = numNodes;
-        this.adjacencyList = new ArrayList<>(numNodes);
+    public FlowNetwork(int numOfNodes) {
+        this.numOfNodes = numOfNodes;
+        this.adjacencyList = new ArrayList<>(numOfNodes);
 
-        for (int i = 0; i < numNodes; i++) {
+        for (int i = 0; i < numOfNodes; i++) {
             adjacencyList.add(new ArrayList<>());
         }
     }
@@ -29,7 +32,7 @@ class FlowNetwork {
     }
 
     public int getNumNodes() {
-        return numNodes;
+        return numOfNodes;
     }
 
 }
